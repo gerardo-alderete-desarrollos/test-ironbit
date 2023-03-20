@@ -1,0 +1,17 @@
+<div class="text-bg-secondary p-3 mb-3">
+    <h6>
+        <strong class="text-decoration-underline">
+            Primeros <span class="text-info">{{ nesimo }}</span> números primos: 
+        </strong> 
+        <small class="text-info" > 
+            <span *ngFor="let p of primos"> {{p}}</span>
+        </small> 
+    </h6>
+    <h6>
+        <strong class="text-decoration-underline">
+            Primeros <span class="text-info">{{ nesimo }}</span> multiplos de 3:  
+        </strong>
+        <small class="text-info">
+            <span *ngFor="let m of multiples3"> {{m}}</span>
+        </small> </h6>
+</div>

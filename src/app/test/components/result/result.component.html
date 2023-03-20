@@ -1,7 +1,12 @@
 <div class="text-bg-secondary p-3 mb-3">
     <h6>
         <strong class="text-decoration-underline">
-            Primeros <span class="text-info">{{ nesimo }}</span> números primos: 
+            <div *ngIf="nesimo === 1; else templatePrimos;">
+                Primer número primo: 
+            </div>
+            <ng-template #templatePrimos>
+                Primeros <span class="text-info">{{ nesimo }}</span> números primos: 
+            </ng-template>
         </strong> 
         <small class="text-info" > 
             <span *ngFor="let p of primos"> {{p}}</span>
@@ -9,7 +14,12 @@
     </h6>
     <h6>
         <strong class="text-decoration-underline">
-            Primeros <span class="text-info">{{ nesimo }}</span> multiplos de 3:  
+            <div *ngIf="nesimo === 1; else templateMultiple;">
+                Primer multiplo de 3:  
+            </div>
+            <ng-template #templateMultiple>
+                Primeros <span class="text-info">{{ nesimo }}</span> multiplos de 3:  
+            </ng-template>
         </strong>
         <small class="text-info">
             <span *ngFor="let m of multiples3"> {{m}}</span>
